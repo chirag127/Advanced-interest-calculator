@@ -28,17 +28,43 @@ function calculateCompoundInterest(initialInvestment, monthlyContribution, years
 
   let futureValue = initialInvestment;
 
-  const monthlyRate = (upperRate + lowerRate) / 2 / 12;
+  const dailyRate = (upperRate + lowerRate) / 2 / 365;
 
-  for (let i = 0; i < years * 12; i++) {
+  const daysInMonth = 30.44; // Average number of days in a month
 
-    futureValue += monthlyContribution;
+  const dailyContribution = monthlyContribution / daysInMonth;
 
-    futureValue *= (1 + monthlyRate / compoundFrequency);
+  for (let i = 0; i < years * 365; i++) {
+
+    if (i % daysInMonth === 0) {
+
+      futureValue += dailyContribution;
+
+    }
+
+    futureValue *= (1 + dailyRate / compoundFrequency);
 
   }
 
   return futureValue;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
