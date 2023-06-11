@@ -1,1 +1,75 @@
 
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Compound Interest Calculator</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <div class="calculator">
+
+    <h1>Compound Interest Calculator</h1>
+
+    <form id="calculator-form">
+
+      <label for="initial-investment">Initial Investment:</label>
+
+      <input type="number" id="initial-investment" required>
+
+      
+
+      <label for="monthly-contribution">Monthly Contribution:</label>
+
+      <input type="number" id="monthly-contribution" required>
+
+      
+
+      <label for="years">Length of Time in Years:</label>
+
+      <input type="number" id="years" required>
+
+      
+
+      <label for="interest-rate">Estimated Interest Rate (%):</label>
+
+      <input type="number" id="interest-rate" required>
+
+      
+
+      <label for="interest-rate-variance">Interest Rate Variance Range (%):</label>
+
+      <input type="number" id="interest-rate-variance" required>
+
+      
+
+      <label for="compound-frequency">Compound Frequency (times per year):</label>
+
+      <input type="number" id="compound-frequency" required>
+
+      
+
+      <button type="submit">Calculate</button>
+
+    </form>
+
+    <div id="result"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
